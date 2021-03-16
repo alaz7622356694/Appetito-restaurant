@@ -25,6 +25,8 @@
     height: 90vh;
     display: flex;
     align-items: center;
+    margin-bottom: 40px;
+
 
     &-left {
         width: 40%;
@@ -73,4 +75,15 @@
 
     }
 
+
+}
+
+.gallery {
+
+
+    .cards-wrapper {
+
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
