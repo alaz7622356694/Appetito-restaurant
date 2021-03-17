@@ -42,8 +42,9 @@
 }
 
 .sub-heading {
+
     font-family: $font-josefinSans;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 300;
     color: $color-secondary;
     margin-bottom: 80px;
@@ -90,7 +91,7 @@
         color: $color-white;
         left: -100%;
         z-index: 10;
-        transition: left .5s;
+        transition: left .6s;
 
         &-heading {
             font-family: $font-dancingScript;
