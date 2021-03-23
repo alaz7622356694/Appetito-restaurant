@@ -14,6 +14,9 @@
             right: -50vw;
             transition: right .7s cubic-bezier(1, 0, 0, 1);
 
+            @include for-phone-only {
+                visibility: hidden;
+            }
 
             .right-img {
                 width: 50%;
@@ -27,6 +30,8 @@
             .right-img-1 {
                 top: 15%;
                 left: 15%;
+
+
             }
 
             .right-img-2 {
@@ -49,9 +54,18 @@
             left: -50vw;
             @include flexLayout;
             transition: left .7s cubic-bezier(1, 0, 0, 1);
+
+            @include for-phone-only {
+
+                left: -100vw;
+                width: 100vw;
+                height: 100vh;
+            }
         }
 
         .nav-list {
+
+
             &-item {
                 list-style: none;
             }
@@ -66,6 +80,11 @@
                 margin: 20px;
                 text-align: center;
                 transition: all .5s;
+
+                @include for-phone-only {
+                    font-size: 20px;
+                    margin: 15px;
+                }
 
                 &:hover {
                     color: saddlebrown;
@@ -115,6 +134,7 @@
     background-size: cover;
 
 
+
     .brand {
         display: flex;
         align-items: center;
@@ -130,54 +150,138 @@
 
 
 .about-us {
-    height: 90vh;
     display: flex;
+    height: 100vh;
     align-items: center;
-    margin-bottom: 40px;
+    align-content: center;
+    margin-bottom: 110px;
+    margin-top: 15px;
+
+
+    @include for-phone-only {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    @include for-tablet-port {
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+    }
+
+
+
+
+
 
 
     &-left {
-        width: 40%;
+        width: 30%;
+
+        @include for-phone-only {
+            visibility: hidden;
+
+        }
 
         img {
-            max-width: 100%;
             opacity: 0.6;
+
         }
+
+
+
+
     }
 
     &-right {
-        width: 60%;
+        width: 70%;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 0 80px;
 
+        @include for-phone-only {
+            width: 100%;
+            padding: 0 10px;
+
+        }
+
+        @include for-tablet-port {
+            padding: 0 10px;
+        }
+
+
         .main-heading {
             font-size: 60px;
             margin-bottom: 20px;
+
+            @include for-phone-only {
+                font-size: 40px;
+                margin-bottom: 10px;
+
+
+            }
+
+
+            @include for-tablet-port {
+                font-size: 50px;
+
+            }
+
+
+
         }
 
         .sub-heading {
             font-size: 40px;
             margin-bottom: 20px;
+
+            @include for-phone-only {
+                font-size: 20px;
+                margin-bottom: 5px;
+
+            }
+
+            @include for-tablet-port {
+                font-size: 30px;
+                margin-bottom: 10px;
+
+            }
+
+
+
         }
 
         .stars {
             margin: 30px 0;
+
+
         }
 
         .star {
             font-size: 15px;
             color: $color-primary;
             margin-left: 10px;
+
+            @include for-phone-only {
+                font-size: 10px;
+
+            }
+
         }
 
         .description {
             font-family: $font-josefinSans;
-            font-size: 15px;
+            font-size: 20px;
             color: $color-secondary;
             text-align: justify;
 
+            @include for-phone-only {
+                font-size: .85em;
+
+            }
 
         }
 
@@ -190,7 +294,6 @@
 
 
     .cards-wrapper {
-
         display: flex;
         flex-wrap: wrap;
     }
@@ -198,20 +301,29 @@
 
 .footer {
     @include flexLayout;
-    flex-direction: column;
+    flex-direction: row;
     padding: 40px 0;
+
+    @include for-phone-only {
+        display: flex;
+        flex-direction: column;
+    }
 
     &-header {
         display: flex;
         align-items: center;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 
     .social-media {
         display: flex;
-        width: 300px;
-        justify-content: space-around;
+        width: 250px;
+        justify-content: space-evenly;
         margin-bottom: 50px;
+
+        @include for-phone-only {
+            width: 150px;
+        }
 
         &-item {
             list-style: none;
@@ -219,9 +331,10 @@
 
         &-link {
             text-decoration: none;
-            font-size: 50px;
+            font-size: 30px;
             color: $color-secondary;
             transition: color .7s;
+
 
             &:hover {
                 color: $color-primary;
@@ -229,11 +342,22 @@
         }
     }
 
-    &-copyright-paragraph {
-        margin-top: 10px;
+
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    .footer-copyright-paragraph {
         font-family: $font-nunito;
         font-size: 15px;
         color: $color-secondary;
         text-transform: capitalize;
+
+        @include for-phone-only {
+            font-size: 10px;
+        }
     }
 }

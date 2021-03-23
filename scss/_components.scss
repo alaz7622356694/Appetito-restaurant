@@ -6,6 +6,12 @@
     left: 5%;
     z-index: 250;
 
+    @include for-phone-only {
+        top: 2%;
+        width: 30px;
+        height: 30px;
+    }
+
     .menu {
         @extend %fullSpace;
         display: flex;
@@ -35,8 +41,13 @@
     border: 3px solid $color-primary;
     border-radius: 50%;
     margin-right: 20px;
+    text-decoration: none;
 
-
+    @include for-phone-only {
+        font-size: 40px;
+        width: 80px;
+        height: 80px;
+    }
 }
 
 .main-name {
@@ -45,8 +56,14 @@
     color: $color-secondary;
     @include textStyles;
 
+    @include for-phone-only {
+        font-size: 30px;
+
+    }
+
 
 }
+
 
 .sub-name {
     @include textStyles;
@@ -55,16 +72,34 @@
     color: $color-secondary;
     text-align: center;
 
+    @include for-phone-only {
+        font-size: 14px;
+
+    }
 }
+
+
 
 .main-heading {
     font-family: $font-dancingScript;
     font-size: 100px;
     font-weight: 300;
     color: $color-primary;
-    margin-top: 80px;
+    margin-top: 90px;
     margin-bottom: 40px;
     text-transform: capitalize;
+
+    @include for-phone-only {
+        font-size: 50px;
+        margin-top: 0;
+
+    }
+
+
+    @include for-tablet-port {
+        font-size: 70px;
+        margin-top: 20px;
+    }
 
 
 }
@@ -72,11 +107,24 @@
 .sub-heading {
 
     font-family: $font-josefinSans;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 300;
     color: $color-secondary;
     margin-bottom: 80px;
     text-transform: capitalize;
+
+    @include for-phone-only {
+        font-size: 20px;
+
+
+    }
+
+    @include for-tablet-port {
+        font-size: 30px;
+
+    }
+
+
 }
 
 .main-btn {
@@ -91,6 +139,13 @@
     border: 1px solid $color-primary;
     cursor: pointer;
     transition: all .4s;
+
+    @include for-phone-only {
+        width: 130px;
+        height: 35px;
+        font-size: 10px;
+
+    }
 
     &:hover {
         background-color: $color-primary;
@@ -127,6 +182,16 @@
             margin-bottom: 20px;
             @include textStyles;
 
+            @include for-phone-only {
+                font-size: 12px;
+                margin-bottom: 10px;
+
+            }
+
+            @include for-tablet-port {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
 
         }
 
@@ -135,6 +200,17 @@
             font-size: 25px;
             margin-bottom: 20px;
             @include textStyles;
+
+            @include for-phone-only {
+                font-size: 8px;
+                margin-bottom: 10px;
+
+            }
+
+            @include for-tablet-port {
+                font-size: 13px;
+                margin-bottom: 10px;
+            }
 
         }
 
@@ -151,6 +227,13 @@
             font-weight: bold;
             outline: none;
             cursor: pointer;
+
+            @include for-phone-only {
+                font-size: 10px;
+                width: 75px;
+                height: 25px;
+
+            }
 
 
 
