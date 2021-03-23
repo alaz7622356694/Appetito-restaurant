@@ -171,7 +171,13 @@
         margin-top: 40px;
     }
 
+    @include phone-land {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 110px;
+        margin-top: 40px;
 
+    }
 
 
 
@@ -185,8 +191,15 @@
 
         }
 
+        @include phone-land {
+            visibility: visible;
+
+
+        }
+
         img {
             opacity: 0.6;
+            margin-top: 50%;
 
         }
 
@@ -212,6 +225,10 @@
             padding: 0 10px;
         }
 
+        @include phone-land {
+            padding: 0 10px;
+
+        }
 
         .main-heading {
             font-size: 60px;
@@ -220,6 +237,13 @@
             @include for-phone-only {
                 font-size: 40px;
                 margin-bottom: 10px;
+
+
+            }
+
+            @include phone-land {
+                font-size: 40px;
+
 
 
             }
@@ -250,6 +274,12 @@
 
             }
 
+            @include phone-land {
+                font-size: 20px;
+
+
+            }
+
 
 
         }
@@ -270,6 +300,11 @@
 
             }
 
+            @include phone-land {
+                font-size: 10px;
+
+            }
+
         }
 
         .description {
@@ -279,6 +314,11 @@
             text-align: justify;
 
             @include for-phone-only {
+                font-size: .85em;
+
+            }
+
+            @include phone-land {
                 font-size: .85em;
 
             }

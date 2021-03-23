@@ -48,6 +48,13 @@
         width: 80px;
         height: 80px;
     }
+
+    @include phone-land {
+        font-size: 40px;
+        width: 80px;
+        height: 80px;
+
+    }
 }
 
 .main-name {
@@ -85,7 +92,7 @@
     font-size: 100px;
     font-weight: 300;
     color: $color-primary;
-    margin-top: 90px;
+    margin-top: 100px;
     margin-bottom: 40px;
     text-transform: capitalize;
 
@@ -101,13 +108,17 @@
         margin-top: 20px;
     }
 
+    @include phone-land {
+        margin-top: 100px;
+        margin-bottom: 20px;
+    }
 
 }
 
 .sub-heading {
 
     font-family: $font-josefinSans;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 300;
     color: $color-secondary;
     margin-bottom: 80px;
@@ -122,6 +133,11 @@
     @include for-tablet-port {
         font-size: 30px;
 
+    }
+
+    @include phone-land {
+        font-size: 20px;
+        margin-bottom: 40px;
     }
 
 
